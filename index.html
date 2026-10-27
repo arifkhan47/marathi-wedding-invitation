@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#6b1028">
+  <meta name="description" content="A beautiful interactive Marathi wedding invitation.">
+  <title>आमच्या लग्नाची पत्रिका | Wedding Invitation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@400;500;600;700&family=Tiro+Devanagari+Marathi:ital@0;1&family=Yatra+One&family=Cormorant+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/config.js" defer></script>
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content" data-i18n="skip">मुख्य मजकुराकडे जा</a>
+
+  <section class="cover-screen" id="cover" aria-label="Wedding invitation cover">
+    <div class="cover-mandala" aria-hidden="true">✺</div>
+    <div class="cover-card" id="coverCard">
+      <div class="card-topline">॥ श्री गणेशाय नमः ॥</div>
+      <div class="ganesh-mark" aria-hidden="true">ॐ</div>
+      <div class="card-ornament" aria-hidden="true">❧ ❦ ❧</div>
+      <p class="eyebrow" data-i18n="coverEyebrow">सस्नेह निमंत्रण</p>
+      <h1 class="cover-title" data-i18n="coverTitle">शुभविवाह</h1>
+      <p class="cover-names"><span data-config="groom.nameMr">आदित्य</span><span class="ampersand">&</span><span data-config="bride.nameMr">सायली</span></p>
+      <div class="card-rule"><span>✦</span></div>
+      <p class="cover-instruction" data-i18n="openCard">आमंत्रण उघडण्यासाठी स्पर्श करा</p>
+      <button class="open-card-button" id="openCard" aria-label="Open wedding invitation">
+        <span aria-hidden="true">✧</span> <span data-i18n="openButton">पत्रिका उघडा</span> <span aria-hidden="true">✧</span>
+      </button>
+      <div class="card-bottomline">मंगल परिणय • मंगलमय सोहळा</div>
+    </div>
+    <p class="cover-footnote" data-i18n="coverFootnote">एक सुंदर नव्या प्रवासाची सुरुवात...</p>
+  </section>
+
+  <div class="site-shell" id="siteShell" inert>
+    <header class="site-header">
+      <a href="#home" class="brand-mark" aria-label="Home">॥ शुभमंगल ॥</a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="#invitation" data-i18n="navInvite">निमंत्रण</a>
+        <a href="#events" data-i18n="navEvents">कार्यक्रम</a>
+        <a href="#dateReveal" data-i18n="navDate">शुभदिन</a>
+        <a href="#venue" data-i18n="navVenue">स्थळ</a>
+      </nav>
+      <div class="header-actions">
+        <button class="language-toggle" id="languageToggle" aria-label="Switch language">EN</button>
+        <button class="music-toggle" id="musicToggle" aria-label="Play or pause music" title="Music is optional">♫ <span data-i18n="music">संगीत</span></button>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <section class="hero section" id="home">
+        <div class="hero-decoration hero-decoration-left" aria-hidden="true">❋</div>
+        <div class="hero-decoration hero-decoration-right" aria-hidden="true">❋</div>
+        <p class="eyebrow reveal" data-i18n="heroEyebrow">॥ श्री गणेशाय नमः ॥</p>
+        <div class="temple-arch reveal">
+          <div class="arch-inner">
+            <div class="couple-illustration" aria-label="Illustration of a Maharashtrian bride and groom">
+              <svg viewBox="0 0 360 250" role="img" aria-labelledby="coupleTitle" xmlns="http://www.w3.org/2000/svg">
+                <title id="coupleTitle">Illustrated Maharashtrian bride and groom</title>
+                <defs>
+                  <linearGradient id="saree" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#b51f3d"/><stop offset="1" stop-color="#6b1028"/></linearGradient>
+                  <linearGradient id="sherwani" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f3dfaa"/><stop offset="1" stop-color="#c89d49"/></linearGradient>
+                </defs>
+                <g class="floating-flower" fill="#d4af65"><path d="M40 43c-10-17 8-25 12-8 9-16 25-5 12 9 18-3 20 15 2 17 9 16-8 24-14 8-10 16-25 5-12-9-18 3-20-15-2-17-8-16 8-24 14-8z"/><circle cx="57" cy="55" r="5" fill="#fff0c9"/></g>
+                <g class="floating-flower" fill="#d4af65" transform="translate(260 20) scale(.8)"><path d="M40 43c-10-17 8-25 12-8 9-16 25-5 12 9 18-3 20 15 2 17 9 16-8 24-14 8-10 16-25 5-12-9-18 3-20-15-2-17-8-16 8-24 14-8z"/><circle cx="57" cy="55" r="5" fill="#fff0c9"/></g>
+                <!-- Groom -->
+                <g class="groom-figure">
+                  <path d="M112 110 Q100 142 88 222 L174 222 Q164 155 153 110Z" fill="url(#sherwani)" stroke="#9d6c24" stroke-width="2"/>
+                  <path d="M120 116 L136 151 L151 116" fill="none" stroke="#9d6c24" stroke-width="2"/>
+                  <path d="M128 125 L136 143 L144 125" fill="#6b1028"/>
+                  <circle cx="136" cy="78" r="27" fill="#a96342"/>
+                  <path d="M108 77 Q106 48 137 46 Q165 49 164 76 L157 68 Q136 76 113 67Z" fill="#3d241d"/>
+                  <path d="M106 58 Q136 22 166 58 L158 67 L113 67Z" fill="#b51f3d" stroke="#d4af65" stroke-width="3"/>
+                  <path d="M112 57 L160 57" stroke="#f5df9c" stroke-width="3"/>
+                  <circle cx="126" cy="80" r="2.2" fill="#321b18"/><circle cx="146" cy="80" r="2.2" fill="#321b18"/>
+                  <path d="M127 92 Q136 99 145 92" fill="none" stroke="#6b3027" stroke-width="2" stroke-linecap="round"/>
+                  <path d="M112 126 Q96 145 103 171" fill="none" stroke="#a96342" stroke-width="12" stroke-linecap="round"/>
+                  <path d="M159 126 Q177 145 170 171" fill="none" stroke="#a96342" stroke-width="12" stroke-linecap="round"/>
+                </g>
+                <!-- Bride -->
+                <g class="bride-figure">
+                  <path d="M204 115 Q186 157 184 222 L276 222 Q272 157 252 115Z" fill="url(#saree)" stroke="#d4af65" stroke-width="2"/>
+                  <path d="M203 128 L226 155 L251 126" fill="none" stroke="#e9c66f" stroke-width="3"/>
+                  <path d="M196 145 Q227 169 264 145 L276 222 L184 222Z" fill="#8b1530" stroke="#d4af65" stroke-width="2"/>
+                  <path d="M198 159 L218 222 M256 159 L238 222" stroke="#e6bf60" stroke-width="2" opacity=".85"/>
+                  <circle cx="229" cy="78" r="27" fill="#c77e58"/>
+                  <path d="M202 77 Q197 48 228 46 Q259 48 256 78 L250 62 Q229 73 207 63Z" fill="#271b18"/>
+                  <path d="M203 61 Q229 39 255 61 L260 102 Q244 117 229 116 Q209 110 198 98Z" fill="#8b1530" stroke="#d4af65" stroke-width="3"/>
+                  <path d="M205 64 Q229 48 253 64" fill="none" stroke="#f4d58a" stroke-width="4"/>
+                  <circle cx="219" cy="80" r="2.2" fill="#321b18"/><circle cx="239" cy="80" r="2.2" fill="#321b18"/>
+                  <path d="M220 92 Q229 99 238 92" fill="none" stroke="#7e2e26" stroke-width="2" stroke-linecap="round"/>
+                  <circle cx="229" cy="72" r="3" fill="#d4af65"/>
+                  <path d="M207 107 Q229 121 251 107" fill="none" stroke="#e9c66f" stroke-width="3"/>
+                  <path d="M202 125 Q183 143 192 170" fill="none" stroke="#c77e58" stroke-width="11" stroke-linecap="round"/>
+                  <path d="M254 125 Q272 145 266 170" fill="none" stroke="#c77e58" stroke-width="11" stroke-linecap="round"/>
+                  <circle cx="193" cy="172" r="5" fill="#d4af65"/><circle cx="266" cy="172" r="5" fill="#d4af65"/>
+                </g>
+                <path d="M76 225 Q180 239 284 225" fill="none" stroke="#d4af65" stroke-width="2"/>
+                <g fill="#d4af65"><circle cx="90" cy="226" r="3"/><circle cx="270" cy="226" r="3"/></g>
+              </svg>
+            </div>
+            <p class="hero-small" data-i18n="heroSmall">दोन मनं • एक सुंदर बंध</p>
+            <h1 class="couple-names"><span data-config="groom.nameMr">आदित्य</span><span class="names-amp">&</span><span data-config="bride.nameMr">सायली</span></h1>
+            <p class="hero-description" data-i18n="heroDescription">आमच्या आयुष्यातील या मंगल क्षणी आपली उपस्थिती आणि आशीर्वाद लाभावेत, हीच प्रेमळ विनंती.</p>
+            <div class="hero-date"><span aria-hidden="true">✦</span> <span data-config="wedding.displayDateMr">१४ फेब्रुवारी २०२७</span> <span aria-hidden="true">✦</span></div>
+          </div>
+        </div>
+        <a href="#invitation" class="scroll-cue"><span data-i18n="scroll">पुढे पाहा</span><span aria-hidden="true">⌄</span></a>
+      </section>
+
+      <section class="section invitation-section" id="invitation">
+        <div class="section-heading reveal">
+          <span class="section-symbol">❦</span>
+          <p class="eyebrow" data-i18n="invitationEyebrow">प्रेमपूर्वक निमंत्रण</p>
+          <h2 data-i18n="invitationTitle">आमच्या आनंदात सहभागी व्हा</h2>
+          <div class="ornament-rule"><span>✦</span></div>
+        </div>
+        <article class="invitation-paper reveal">
+          <div class="paper-corner corner-tl">❧</div><div class="paper-corner corner-tr">❧</div>
+          <p class="invitation-mantra" data-i18n="mantra">॥ श्री गणेशाय नमः ॥</p>
+          <p class="invitation-copy" data-i18n="invitationCopy">ईश्वराच्या कृपेने आणि वडीलधाऱ्यांच्या आशीर्वादाने आमच्या कुटुंबातील हा मंगल सोहळा साजरा होत आहे. या शुभप्रसंगी आपण सहकुटुंब उपस्थित राहून वधू-वरांना आशीर्वाद द्यावेत, ही नम्र विनंती.</p>
+          <div class="family-columns">
+            <div><span data-i18n="groomFamily">वरपक्ष</span><h3 data-config="groom.parentsMr">श्री. व सौ. देशमुख</h3><p data-config="groom.familyLineMr">देशमुख परिवार</p></div>
+            <div class="family-divider" aria-hidden="true">❦</div>
+            <div><span data-i18n="brideFamily">वधूपक्ष</span><h3 data-config="bride.parentsMr">श्री. व सौ. पाटील</h3><p data-config="bride.familyLineMr">पाटील परिवार</p></div>
+          </div>
+          <div class="paper-corner corner-bl">❧</div><div class="paper-corner corner-br">❧</div>
+        </article>
+      </section>
+
+      <section class="section events-section" id="events">
+        <div class="section-heading reveal">
+          <span class="section-symbol">❋</span>
+          <p class="eyebrow" data-i18n="eventsEyebrow">मंगल सोहळे</p>
+          <h2 data-i18n="eventsTitle">कार्यक्रमाची रूपरेषा</h2>
+          <p class="section-intro" data-i18n="eventsIntro">आपल्या भेटीची आतुरतेने वाट पाहत आहोत.</p>
+        </div>
+        <div class="event-timeline" id="eventList"></div>
+      </section>
+
+      <section class="section date-section" id="dateReveal">
+        <div class="date-section-pattern" aria-hidden="true"></div>
+        <div class="section-heading reveal">
+          <p class="eyebrow" data-i18n="dateEyebrow">एक खास दिवस</p>
+          <h2 data-i18n="dateTitle">आमचा शुभदिन शोधा</h2>
+          <p class="section-intro" data-i18n="scratchHint">हृदयावर अलगद स्क्रॅच करा आणि लग्नाची तारीख उघडा.</p>
+        </div>
+        <div class="scratch-wrap reveal">
+          <div class="scratch-heart">
+            <div class="revealed-date" id="revealedDate">
+              <span class="date-label" data-i18n="weddingDay">आमचा लग्नसोहळा</span>
+              <strong data-config="wedding.displayDateMr">१४ फेब्रुवारी २०२७</strong>
+              <span data-config="wedding.timeDisplayMr">सकाळी १०:३० वाजता</span>
+            </div>
+            <canvas id="scratchCanvas" aria-label="Scratch to reveal wedding date"></canvas>
+            <div class="heart-shape" aria-hidden="true">♥</div>
+            <div class="scratch-prompt" id="scratchPrompt"><span>✧</span><span data-i18n="scratchNow">येथे स्क्रॅच करा</span><span>✧</span></div>
+          </div>
+          <button class="text-button" id="revealDateButton" data-i18n="revealButton">तारीख थेट उघडा</button>
+        </div>
+        <div class="countdown-block reveal">
+          <p class="eyebrow" data-i18n="countdownEyebrow">उलटी गिनती सुरू झाली आहे</p>
+          <h3 data-i18n="countdownTitle">मंगल क्षणापर्यंत</h3>
+          <div class="countdown" id="countdown" aria-live="off">
+            <div class="count-unit"><strong id="days">000</strong><span data-i18n="days">दिवस</span></div>
+            <div class="count-unit"><strong id="hours">00</strong><span data-i18n="hours">तास</span></div>
+            <div class="count-unit"><strong id="minutes">00</strong><span data-i18n="minutes">मिनिटे</span></div>
+            <div class="count-unit"><strong id="seconds">00</strong><span data-i18n="seconds">सेकंद</span></div>
+          </div>
+          <p class="countdown-note" id="countdownNote"></p>
+        </div>
+      </section>
+
+      <section class="section venue-section" id="venue">
+        <div class="section-heading reveal">
+          <span class="section-symbol">⌖</span>
+          <p class="eyebrow" data-i18n="venueEyebrow">आपली भेट येथे होईल</p>
+          <h2 data-i18n="venueTitle">लग्नाचे स्थळ</h2>
+        </div>
+        <div class="venue-card reveal">
+          <div class="venue-details">
+            <div class="venue-icon" aria-hidden="true">⌖</div>
+            <h3 data-config="venue.name">शुभमंगल सभागृह</h3>
+            <p class="venue-address" data-config="venue.address">आपला पूर्ण पत्ता येथे जोडा, पुणे, महाराष्ट्र</p>
+            <p class="venue-time"><span aria-hidden="true">◷</span> <span data-config="wedding.displayDateMr">१४ फेब्रुवारी २०२७</span> · <span data-config="wedding.timeDisplayMr">सकाळी १०:३० वाजता</span></p>
+            <div class="venue-actions">
+              <a class="button button-primary" id="directionsLink" href="#" target="_blank" rel="noopener noreferrer" data-i18n="directions">नकाशावर मार्ग पाहा ↗</a>
+              <button class="button button-outline" id="copyAddress" data-i18n="copyAddress">पत्ता कॉपी करा</button>
+            </div>
+            <p class="copy-feedback" id="copyFeedback" role="status"></p>
+          </div>
+          <div class="map-frame" id="mapFrame">
+            <div class="map-placeholder">
+              <span aria-hidden="true">⌖</span>
+              <p data-i18n="mapPlaceholder">स्थळाचा पत्ता जोडल्यानंतर नकाशा येथे दिसेल.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section closing-section" id="closing">
+        <div class="closing-lotus" aria-hidden="true">❀</div>
+        <p class="eyebrow reveal" data-i18n="closingEyebrow">आपली उपस्थितीच आमची भेट</p>
+        <h2 class="reveal" data-i18n="closingTitle">आपली वाट पाहत आहोत!</h2>
+        <p class="closing-copy reveal" data-i18n="closingCopy">आपले प्रेम, शुभेच्छा आणि आशीर्वाद आमच्यासाठी अमूल्य आहेत.</p>
+        <div class="closing-names reveal"><span data-config="groom.nameMr">आदित्य</span><span>&</span><span data-config="bride.nameMr">सायली</span></div>
+        <p class="closing-family reveal" data-config="invitingFamilyDisplayMr">आपले स्नेहांकित — दोन्ही परिवार</p>
+        <div class="closing-mantra">॥ शुभमंगल सावधान ॥</div>
+        <button class="share-button reveal" id="shareButton" data-i18n="share">आमंत्रण शेअर करा ↗</button>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span data-i18n="footer">प्रेमाने तयार केलेले आमंत्रण</span>
+      <span aria-hidden="true">✦</span>
+      <a href="#home" data-i18n="backTop">वर जा ↑</a>
+    </footer>
+  </div>
+
+  <audio id="weddingMusic" loop preload="none">
+    <source src="assets/audio/wedding-instrumental.mp3" type="audio/mpeg">
+  </audio>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
